@@ -1,10 +1,9 @@
+import { DialogDeleteComponent } from './DialogDelete/DialogDelete.component';
+import { DialogAddEditComponent } from './DialogAddEdit/DialogAddEdit.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 
 //Reactive forms 
 import { ReactiveFormsModule } from '@angular/forms';
@@ -35,21 +34,21 @@ import { MatIconModule } from '@angular/material/icon';
 //Modales
 import { MatDialogModule } from '@angular/material/dialog';
 
+
 //Grillas
 import {MatGridListModule } from '@angular/material/grid-list';
-import { PruebaModule } from './modales/prueba.module';
 
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    DialogAddEditComponent,
+    DialogDeleteComponent
+    
   ],
   imports: [
-    PruebaModule,
     MatGridListModule, 
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
     MatButtonModule, 
@@ -68,6 +67,6 @@ import { PruebaModule } from './modales/prueba.module';
      
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [DialogAddEditComponent,DialogDeleteComponent]
 })
-export class AppModule { }
+export class PruebaModule { }

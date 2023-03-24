@@ -1,0 +1,27 @@
+table {
+    width: 100%; 
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+    
+}
+
+.mat-elevation-z8{
+    margin-bottom: 10px;
+}
+.container h1{
+    padding-top: 10px;
+    font-size: 40px;
+    text-align: center;
+    font-style: italic;
+    font-weight: 1000;
+}
+.container{
+    background-color: rgba(135, 135, 135, 0.592);
+    width: 100%;
+    border-radius: 5px;
+
+    
+}

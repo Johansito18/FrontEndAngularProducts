@@ -1,0 +1,47 @@
+<h1 mat-dialog-title>{{tituloAccion}} Producto</h1>
+<div mat-dialog-content>
+
+  <form [formGroup]="formProducto" >
+
+    <mat-grid-list cols="1" rowHeight="80px">
+      
+      <mat-grid-tile>
+        <mat-form-field appearance="outline">
+          <mat-label>Nombre</mat-label>
+          <input matInput formControlName="nombre">
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <mat-form-field appearance="outline">
+          <mat-label>Descripcion</mat-label>
+          <input matInput formControlName="descripcion">
+        </mat-form-field>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <mat-form-field appearance="outline">
+          <mat-label>Fecha (yyyy-MM-dd)</mat-label>
+          <input matInput formControlName="fecha">
+        </mat-form-field>
+      </mat-grid-tile>
+  
+    </mat-grid-list>
+
+  </form>
+</div>
+<!-- <div mat-dialog-actions>
+  <button mat-raised-button mat-dialog-close color="warn">Volver</button>
+  <button mat-raised-button color="primary"
+  (click)="addEditProducto()"
+  > {{botonAccion}}
+  </button>
+</div> -->
+<div mat-dialog-actions>
+  <button mat-raised-button mat-dialog-close color="warn">Volver</button>
+  <button mat-raised-button color="primary"
+  (click)="addEditProducto()"
+  [disabled]="formProducto.invalid"
+  > {{botonAccion}}
+  </button>
+</div>
